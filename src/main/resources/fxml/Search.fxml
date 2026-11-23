@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.SearchController" spacing="12">
+  <HBox spacing="12" alignment="CENTER_LEFT">
+    <TextField fx:id="searchField" promptText="🔍  Search task name..." styleClass="search-field" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+    <ComboBox fx:id="subjectBox" styleClass="input"/>
+    <ComboBox fx:id="statusBox" styleClass="input"/>
+  </HBox>
+  <TableView fx:id="table" VBox.vgrow="ALWAYS" styleClass="task-table">
+    <columns>
+      <TableColumn fx:id="colName" text="Task Name"/>
+      <TableColumn fx:id="colSubject" text="Subject"/>
+      <TableColumn fx:id="colDeadline" text="Deadline"/>
+      <TableColumn fx:id="colStatus" text="Status"/>
+    </columns>
+  </TableView>
+</VBox>

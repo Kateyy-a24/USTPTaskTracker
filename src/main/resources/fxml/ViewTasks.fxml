@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.ViewTasksController" spacing="12">
+  <HBox spacing="12" alignment="CENTER_LEFT">
+    <TextField fx:id="searchField" promptText="🔍  Search by task name or subject..." styleClass="search-field" prefWidth="320"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <ComboBox fx:id="filterBox" styleClass="input"/>
+  </HBox>
+  <!-- The header row is added by the controller; click a task row to show/hide its description -->
+  <VBox fx:id="tableCard" styleClass="table-card" VBox.vgrow="ALWAYS">
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="tbl-scroll" VBox.vgrow="ALWAYS">
+      <content>
+        <VBox fx:id="rowsBox"/>
+      </content>
+    </ScrollPane>
+  </VBox>
+</VBox>

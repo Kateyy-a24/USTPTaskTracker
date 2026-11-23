@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.ProfileController" spacing="14">
+  <HBox styleClass="card" spacing="36" alignment="TOP_LEFT" maxWidth="1000">
+    <VBox alignment="TOP_CENTER" spacing="10" minWidth="150">
+      <StackPane fx:id="avatarHolder"/>
+      <Label fx:id="roleChip" styleClass="role-chip"/>
+      <Button fx:id="editBtn" text="Edit" onAction="#onEdit" styleClass="yellow-btn"/>
+      <Button fx:id="photoBtn" text="Change Photo" onAction="#onPhoto" styleClass="secondary-btn"/>
+    </VBox>
+    <VBox spacing="10" HBox.hgrow="ALWAYS">
+      <TextField fx:id="nameField" promptText="Name" styleClass="profile-field, profile-name"/>
+      <TextField fx:id="emailField" promptText="Email" styleClass="profile-field, profile-email"/>
+      <Separator/>
+      <GridPane hgap="20" vgap="10">
+        <columnConstraints>
+          <ColumnConstraints minWidth="130" prefWidth="140"/>
+          <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <Label text="Student ID" styleClass="profile-key" GridPane.rowIndex="0"/>
+        <TextField fx:id="studentIdField" styleClass="profile-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="College" styleClass="profile-key" GridPane.rowIndex="1"/>
+        <TextField fx:id="collegeField" styleClass="profile-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Program" styleClass="profile-key" GridPane.rowIndex="2"/>
+        <TextField fx:id="programField" styleClass="profile-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Current Semester" styleClass="profile-key" GridPane.rowIndex="3"/>
+        <TextField fx:id="semesterField" styleClass="profile-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+      </GridPane>
+    </VBox>
+  </HBox>
+  <HBox fx:id="actionBar" spacing="10" alignment="CENTER_RIGHT" maxWidth="1000">
+    <Button text="Cancel" onAction="#onCancel" styleClass="secondary-btn"/>
+    <Button text="Done" onAction="#onDone" styleClass="primary-btn"/>
+  </HBox>
+</VBox>

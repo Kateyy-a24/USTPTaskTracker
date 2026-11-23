@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.UpcomingController">
+  <VBox styleClass="card" spacing="10">
+    <Label text="Academic Task Deadline" styleClass="card-title"/>
+    <VBox fx:id="list"/>
+  </VBox>
+</VBox>

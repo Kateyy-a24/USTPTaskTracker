@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.RegisterController" styleClass="login-root">
+  <columnConstraints>
+    <ColumnConstraints percentWidth="42"/>
+    <ColumnConstraints percentWidth="58"/>
+  </columnConstraints>
+  <rowConstraints><RowConstraints vgrow="ALWAYS"/></rowConstraints>
+
+  <StackPane fx:id="leftPane" styleClass="login-left" GridPane.columnIndex="0">
+    <Region styleClass="login-overlay"/>
+    <VBox alignment="CENTER" spacing="14">
+      <StackPane fx:id="logoHolder"/>
+      <Label text="USTP-CDO Task Tracker" styleClass="login-brand"/>
+    </VBox>
+  </StackPane>
+
+  <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" styleClass="clear-scroll" GridPane.columnIndex="1">
+    <StackPane styleClass="login-right" minHeight="560">
+      <VBox maxWidth="460" spacing="6" alignment="CENTER_LEFT" maxHeight="-Infinity" styleClass="glass-panel">
+        <Label text="Create Account" styleClass="login-welcome"/>
+        <Label text="Students sign up using your university details." wrapText="true" styleClass="muted"/>
+        <Region prefHeight="10"/>
+        <HBox spacing="12">
+          <VBox spacing="4" HBox.hgrow="ALWAYS"><Label text="FULL NAME" styleClass="field-label"/><TextField fx:id="fullNameField" promptText="Juan D. Dela Cruz" styleClass="input"/></VBox>
+          <VBox spacing="4" HBox.hgrow="ALWAYS"><Label text="STUDENT ID" styleClass="field-label"/><TextField fx:id="studentIdField" promptText="2025300288" styleClass="input"/></VBox>
+        </HBox>
+        <HBox spacing="12">
+          <VBox spacing="4" HBox.hgrow="ALWAYS"><Label text="EMAIL" styleClass="field-label"/><TextField fx:id="emailField" promptText="name@email.com" styleClass="input"/></VBox>
+          <VBox spacing="4" HBox.hgrow="ALWAYS"><Label text="USERNAME" styleClass="field-label"/><TextField fx:id="usernameField" promptText="Choose a username" styleClass="input"/></VBox>
+        </HBox>
+        <HBox spacing="12">
+          <VBox spacing="4" HBox.hgrow="ALWAYS"><Label text="PASSWORD" styleClass="field-label"/><PasswordField fx:id="passField" promptText="At least 8 characters" styleClass="input"/></VBox>
+          <VBox spacing="4" HBox.hgrow="ALWAYS"><Label text="CONFIRM PASSWORD" styleClass="field-label"/><PasswordField fx:id="confirmField" promptText="Re-enter password" styleClass="input" onAction="#onRegister"/></VBox>
+        </HBox>
+        <Label fx:id="errorLbl" styleClass="error-text" wrapText="true"/>
+        <Button text="Create Account" onAction="#onRegister" maxWidth="Infinity" styleClass="primary-btn" defaultButton="true"/>
+        <HBox alignment="CENTER" spacing="4">
+          <Label text="Already have an account?" styleClass="muted"/>
+          <Hyperlink text="Log in" onAction="#onBack" styleClass="link-strong"/>
+        </HBox>
+      </VBox>
+    </StackPane>
+  </ScrollPane>
+</GridPane>

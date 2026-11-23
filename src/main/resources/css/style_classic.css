@@ -1,0 +1,195 @@
+/* ===== USTP-CDO Task Tracker theme (colors sampled from the prototype video) ===== */
+.root {
+    -navy: #0F1B3D;
+    -navy-dark: #0C1432;
+    -nav-active: #1E3A8A;
+    -beige: #D9D3BA;
+    -teal: #1F6178;
+    -teal-hover: #184E61;
+    -gold: #F2A900;
+    -text: #111B33;
+    -muted: #6B7280;
+    -border: #D1D5DB;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: -text;
+}
+
+/* ---------- Login ---------- */
+.login-left { -fx-background-color: linear-gradient(to bottom, #1a2a3a, #0C1432); }
+.login-overlay { -fx-background-color: rgba(12, 20, 50, 0.72); }
+.login-brand { -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; }
+.login-right { -fx-background-color: -beige; -fx-padding: 30; }
+.login-welcome { -fx-font-size: 22px; -fx-font-weight: bold; }
+.field-label { -fx-font-size: 10px; -fx-font-weight: bold; }
+.error-text { -fx-text-fill: #DC2626; -fx-font-size: 12px; }
+.eye-btn { -fx-background-color: transparent; -fx-cursor: hand; -fx-text-fill: -muted; -fx-padding: 0 12 0 0; }
+
+/* ---------- Shared inputs / buttons ---------- */
+.input, .search-field {
+    -fx-background-color: #F7F8FB;
+    -fx-border-color: -border;
+    -fx-border-radius: 6; -fx-background-radius: 6;
+    -fx-padding: 8 12;
+}
+.input:focused, .search-field:focused { -fx-border-color: -teal; }
+.text-area.input { -fx-padding: 0; }
+.text-area.input .content { -fx-background-color: #F7F8FB; -fx-background-radius: 6; }
+.combo-box.input, .date-picker.input { -fx-padding: 2 4; }
+.combo-box.input .list-cell, .combo-box.input .text-field { -fx-background-color: transparent; }
+.date-picker.input .text-field { -fx-background-color: transparent; }
+.primary-btn {
+    -fx-background-color: -teal; -fx-text-fill: white; -fx-font-weight: bold;
+    -fx-background-radius: 6; -fx-padding: 10 22; -fx-cursor: hand;
+}
+.primary-btn:hover { -fx-background-color: -teal-hover; }
+.secondary-btn {
+    -fx-background-color: #F1F3F6; -fx-text-fill: #374151; -fx-font-weight: bold;
+    -fx-background-radius: 6; -fx-padding: 10 22; -fx-cursor: hand;
+}
+.secondary-btn:hover { -fx-background-color: #E5E7EB; }
+.yellow-btn {
+    -fx-background-color: #FFF200; -fx-text-fill: #333; -fx-font-size: 11px;
+    -fx-background-radius: 4; -fx-padding: 2 22; -fx-cursor: hand;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar { -fx-background-color: -navy; -fx-padding: 22 12 14 12; }
+.sidebar-brand { -fx-padding: 0 0 22 0; }
+.brand-gold { -fx-text-fill: -gold; -fx-font-weight: bold; -fx-font-size: 14px; }
+.brand-small { -fx-text-fill: #CBD5E1; -fx-font-size: 8px; }
+.version { -fx-text-fill: #475569; -fx-font-size: 9px; -fx-padding: 0 0 0 10; }
+.nav-btn {
+    -fx-background-color: transparent; -fx-text-fill: #CBD5E1;
+    -fx-alignment: CENTER_LEFT; -fx-padding: 11 14; -fx-background-radius: 6; -fx-cursor: hand;
+}
+.nav-btn:hover { -fx-background-color: rgba(255,255,255,0.07); }
+.nav-btn.nav-active { -fx-background-color: -nav-active; -fx-text-fill: white; -fx-font-weight: bold; }
+
+/* ---------- Content area ---------- */
+.content { -fx-background-color: -beige; -fx-padding: 26 32 26 32; }
+.page-title { -fx-font-size: 20px; -fx-font-weight: bold; }
+.muted { -fx-text-fill: -muted; }
+.muted-small { -fx-text-fill: -muted; -fx-font-size: 11px; }
+.user-chip-name { -fx-font-weight: bold; -fx-font-size: 12px; }
+.card {
+    -fx-background-color: white; -fx-background-radius: 12; -fx-padding: 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 2);
+}
+.card-title { -fx-font-size: 14px; -fx-font-weight: bold; }
+.form-label { -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #374151; }
+.link-strong { -fx-text-fill: -teal; -fx-font-weight: bold; -fx-border-color: transparent; }
+
+/* ---------- Dashboard ---------- */
+.stat-card {
+    -fx-background-color: white; -fx-background-radius: 12; -fx-padding: 16 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 2);
+}
+.stat-label { -fx-text-fill: -muted; -fx-font-size: 12px; }
+.stat-value { -fx-font-size: 26px; -fx-font-weight: bold; }
+.stat-icon { -fx-background-radius: 20; -fx-min-width: 36; -fx-min-height: 36; -fx-alignment: CENTER; -fx-font-size: 16px; }
+.icon-orange { -fx-background-color: #FEF3C7; -fx-text-fill: #D97706; }
+.icon-green  { -fx-background-color: #DCFCE7; -fx-text-fill: #16A34A; }
+.icon-red    { -fx-background-color: #FEE2E2; -fx-text-fill: #DC2626; }
+.list-row { -fx-border-color: transparent transparent #EEF0F3 transparent; }
+.row-title { -fx-font-weight: bold; -fx-font-size: 13px; }
+.date-label { -fx-text-fill: #4B5563; -fx-font-weight: bold; -fx-font-size: 12px; }
+
+/* ---------- Pills / status ---------- */
+.pill { -fx-background-radius: 12; -fx-padding: 3 12; -fx-font-size: 10px; -fx-font-weight: bold; }
+.pill-pending { -fx-background-color: #FEF3C7; -fx-text-fill: #D97706; }
+.pill-done    { -fx-background-color: #DCFCE7; -fx-text-fill: #16A34A; }
+.status-box { -fx-background-color: #F7F8FB; -fx-border-color: -border; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 12; -fx-font-weight: bold; }
+.text-orange { -fx-text-fill: #D97706; }
+.text-green { -fx-text-fill: #16A34A; }
+
+/* ---------- Table ---------- */
+.task-table { -fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #E5E7EB; }
+.task-table .column-header-background { -fx-background-color: white; }
+.task-table .column-header { -fx-background-color: white; -fx-border-color: transparent transparent #E5E7EB transparent; }
+.task-table .column-header .label { -fx-font-weight: bold; -fx-font-size: 12px; }
+.task-table .table-row-cell { -fx-background-color: white; -fx-cell-size: 46; -fx-border-color: transparent transparent #F1F3F6 transparent; }
+.task-table .table-row-cell:selected { -fx-background-color: #EEF2FF; }
+.task-table .table-row-cell:selected .text { -fx-fill: -text; }
+.task-table .table-cell { -fx-alignment: CENTER_LEFT; -fx-border-color: transparent; }
+.icon-btn { -fx-background-radius: 7; -fx-padding: 0; -fx-cursor: hand; -fx-min-width: 30; -fx-min-height: 30; -fx-pref-width: 30; -fx-pref-height: 30; -fx-max-width: 30; -fx-max-height: 30; }
+.icon-btn-gray { -fx-background-color: #EEF0F3; -fx-text-fill: #4B5563; }
+.icon-btn-blue { -fx-background-color: #E0ECFF; -fx-text-fill: #2563EB; }
+.icon-btn-red  { -fx-background-color: #FEE2E2; -fx-text-fill: #DC2626; }
+
+/* ---------- Profile ---------- */
+.profile-field { -fx-background-color: transparent; -fx-border-color: transparent; -fx-padding: 4 6; }
+.profile-field.editing { -fx-background-color: #F7F8FB; -fx-border-color: #374151; -fx-border-radius: 6; -fx-background-radius: 6; }
+.profile-name { -fx-font-size: 22px; -fx-font-weight: bold; }
+.profile-email { -fx-text-fill: -muted; }
+.profile-key { -fx-text-fill: #4B5563; -fx-font-weight: bold; }
+.role-chip { -fx-background-color: #E0E7FF; -fx-text-fill: #1E40AF; -fx-background-radius: 10; -fx-padding: 2 10; -fx-font-size: 10px; -fx-font-weight: bold; }
+
+/* ---------- Register ---------- */
+.clear-scroll, .clear-scroll > .viewport { -fx-background-color: -beige; -fx-background: -beige; -fx-padding: 0; }
+.clear-scroll { -fx-border-color: transparent; }
+
+/* ---------- Sidebar SVG icons ---------- */
+.nav-icon { -fx-fill: transparent; -fx-stroke: #CBD5E1; -fx-stroke-width: 1.9; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.nav-btn:hover .nav-icon { -fx-stroke: white; }
+.nav-btn.nav-active .nav-icon { -fx-stroke: white; }
+
+/* ---------- Dialogs (Logout Confirmation etc.) ---------- */
+.dlg-overlay { -fx-background-color: rgba(15, 27, 61, 0.55); }
+.dlg-card {
+    -fx-background-color: white; -fx-background-radius: 18; -fx-padding: 34 40 30 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 30, 0.1, 0, 8);
+}
+.dlg-circle { -fx-background-radius: 32; }
+.dlg-circle-danger  { -fx-background-color: #FEE2E2; }
+.dlg-circle-success { -fx-background-color: #DCFCE7; }
+.dlg-circle-info    { -fx-background-color: #E0ECFF; }
+.dlg-icon { -fx-fill: transparent; -fx-stroke-width: 1.8; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.dlg-circle-danger .dlg-icon  { -fx-stroke: #DC2626; }
+.dlg-circle-success .dlg-icon { -fx-stroke: #16A34A; }
+.dlg-circle-info .dlg-icon    { -fx-stroke: #2563EB; }
+.dlg-title { -fx-font-size: 20px; -fx-font-weight: bold; }
+.dlg-msg { -fx-text-fill: #4B5563; -fx-font-size: 14px; -fx-line-spacing: 3; }
+.dlg-btn-danger {
+    -fx-background-color: #DC2626; -fx-text-fill: white; -fx-font-weight: bold;
+    -fx-background-radius: 6; -fx-padding: 12 22; -fx-cursor: hand;
+}
+.dlg-btn-danger:hover { -fx-background-color: #B91C1C; }
+
+/* ---------- Table header alignment ---------- */
+.task-table .column-header .label { -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 8; }
+.task-table .table-cell { -fx-padding: 0 0 0 8; }
+
+/* ---------- Action column (icons + centered header) ---------- */
+.act-icon { -fx-fill: transparent; -fx-stroke-width: 1.9; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.icon-btn-gray .act-icon { -fx-stroke: #4B5563; }
+.icon-btn-blue .act-icon { -fx-stroke: #2563EB; }
+.icon-btn-red  .act-icon { -fx-stroke: #DC2626; }
+.icon-btn:hover { -fx-opacity: 0.8; }
+.task-table .action-col.table-cell { -fx-alignment: CENTER; -fx-padding: 0; }
+.task-table .column-header.action-col .label { -fx-alignment: CENTER; -fx-padding: 0; }
+
+/* ---------- My Tasks: row list with expandable description ---------- */
+.table-card { -fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E5E7EB; -fx-border-radius: 12; }
+.tbl-scroll, .tbl-scroll > .viewport { -fx-background-color: transparent; -fx-background: transparent; -fx-padding: 0; -fx-border-color: transparent; }
+.tbl-scroll .scroll-bar:vertical { -fx-pref-width: 10; }
+.tbl-header { -fx-background-color: #EEF2F8; -fx-background-radius: 12 12 0 0; -fx-padding: 14 16; }
+.tbl-head-label { -fx-font-weight: bold; -fx-font-size: 12px; }
+.tbl-block { -fx-border-color: transparent transparent #EEF0F3 transparent; }
+.tbl-row { -fx-padding: 9 16; -fx-cursor: hand; }
+.tbl-row:hover { -fx-background-color: #F8FAFC; }
+.tbl-open { -fx-background-color: #F8FAFC; }
+.tbl-name { -fx-font-size: 13.5px; -fx-font-weight: 500; -fx-text-fill: #111827; -fx-cursor: hand; }
+.tbl-name:hover { -fx-text-fill: #2563EB; -fx-underline: true; }
+.tbl-cell { -fx-text-fill: #374151; }
+.tbl-desc { -fx-text-fill: #374151; -fx-font-size: 13px; -fx-padding: 12 24 12 24; -fx-line-spacing: 2; -fx-background-color: white; -fx-border-color: #E5E7EB; -fx-border-radius: 8; -fx-background-radius: 8; }
+.tbl-desc-empty { -fx-text-fill: -muted; -fx-font-style: italic; -fx-padding: 12 24 12 24; -fx-background-color: white; -fx-border-color: #E5E7EB; -fx-border-radius: 8; -fx-background-radius: 8; }
+
+/* ---------- Forgot password / OTP ---------- */
+.otp-field { -fx-font-size: 24px; -fx-font-weight: bold; -fx-alignment: center; }
+.step-title { -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: -muted; }
+.success-text { -fx-text-fill: #16A34A; -fx-font-size: 12px; }
+
+/* ---------- Alarm toggle ---------- */
+.bell-btn { -fx-background-color: #EEF2F7; -fx-background-radius: 16; -fx-text-fill: #0F1B3D; -fx-font-size: 12px; -fx-font-weight: bold; -fx-padding: 6 12 6 12; -fx-cursor: hand; }
+.bell-btn:hover { -fx-background-color: #E0E7F1; }

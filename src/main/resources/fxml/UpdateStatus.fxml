@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.UpdateStatusController">
+  <VBox styleClass="card" spacing="12" maxWidth="620">
+    <VBox spacing="5"><Label text="Task Name" styleClass="form-label"/><TextField fx:id="nameField" editable="false" styleClass="input"/></VBox>
+    <VBox spacing="5"><Label text="Current Status" styleClass="form-label"/><Label fx:id="currentLbl" styleClass="status-box" maxWidth="Infinity"/></VBox>
+    <VBox spacing="5"><Label text="Change Status To" styleClass="form-label"/><ComboBox fx:id="newBox" styleClass="input" maxWidth="Infinity"/></VBox>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+      <Button text="Cancel" onAction="#onCancel" styleClass="secondary-btn"/>
+      <Button text="Update Status" onAction="#onUpdate" styleClass="primary-btn"/>
+    </HBox>
+  </VBox>
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.MainController" styleClass="glass-root">
+  <left>
+    <VBox styleClass="sidebar" prefWidth="220" minWidth="200" spacing="4">
+      <VBox alignment="CENTER" spacing="2" styleClass="sidebar-brand">
+        <StackPane fx:id="sidebarLogo"/>
+        <Label text="USTP - CDO" styleClass="brand-gold"/>
+        <Label text="TASK TRACKER" styleClass="brand-small"/>
+      </VBox>
+      <Button fx:id="navDashboard" text="Dashboard" onAction="#showDashboard" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Button fx:id="navAdd" text="Add Task" onAction="#showAddTask" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Button fx:id="navView" text="View Tasks" onAction="#showViewTasks" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Button fx:id="navUpcoming" text="Upcoming Deadlines" onAction="#showUpcoming" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Button fx:id="navSearch" text="Search &amp; Filter" onAction="#showSearch" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Button fx:id="navProfile" text="Profile" onAction="#showProfile" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Button fx:id="navLogout" text="Logout" onAction="#onLogout" styleClass="nav-btn" maxWidth="Infinity"/>
+      <Region VBox.vgrow="ALWAYS"/>
+      <Label text="v1.2.0-Production" styleClass="version"/>
+    </VBox>
+  </left>
+  <center>
+    <VBox styleClass="content" spacing="18">
+      <HBox alignment="TOP_LEFT">
+        <VBox spacing="3">
+          <Label fx:id="titleLbl" styleClass="page-title"/>
+          <Label fx:id="subtitleLbl" styleClass="muted" wrapText="true"/>
+        </VBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox alignment="CENTER" spacing="10">
+          <Button fx:id="emailBtn" onAction="#onToggleEmail" styleClass="bell-btn"/>
+          <Button fx:id="soundBtn" onAction="#onToggleSound" styleClass="bell-btn"/>
+          <Label fx:id="userNameLbl" styleClass="user-chip-name"/>
+          <StackPane fx:id="avatarHolder"/>
+        </HBox>
+      </HBox>
+      <StackPane fx:id="pageHolder" VBox.vgrow="ALWAYS"/>
+    </VBox>
+  </center>
+</BorderPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ustp.tracker.controller.DashboardController" spacing="18">
+  <HBox spacing="18">
+    <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" maxWidth="Infinity" alignment="CENTER_LEFT">
+      <VBox spacing="2" HBox.hgrow="ALWAYS"><Label text="Pending Tasks" styleClass="stat-label"/><Label fx:id="pendingLbl" styleClass="stat-value"/></VBox>
+      <Label text="◷" styleClass="stat-icon, icon-orange"/>
+    </HBox>
+    <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" maxWidth="Infinity" alignment="CENTER_LEFT">
+      <VBox spacing="2" HBox.hgrow="ALWAYS"><Label text="Completed" styleClass="stat-label"/><Label fx:id="completedLbl" styleClass="stat-value"/></VBox>
+      <Label text="✔" styleClass="stat-icon, icon-green"/>
+    </HBox>
+    <HBox styleClass="stat-card" HBox.hgrow="ALWAYS" maxWidth="Infinity" alignment="CENTER_LEFT">
+      <VBox spacing="2" HBox.hgrow="ALWAYS"><Label text="Upcoming Deadlines" styleClass="stat-label"/><Label fx:id="upcomingLbl" styleClass="stat-value"/></VBox>
+      <Label text="⏰" styleClass="stat-icon, icon-red"/>
+    </HBox>
+  </HBox>
+  <VBox styleClass="card" spacing="8">
+    <HBox alignment="CENTER_LEFT">
+      <Label text="Today's Target Highlights" styleClass="card-title"/>
+      <Region HBox.hgrow="ALWAYS"/>
+      <Hyperlink text="View All" onAction="#showAll" styleClass="link-strong"/>
+    </HBox>
+    <VBox fx:id="highlights" spacing="0"/>
+  </VBox>
+</VBox>
